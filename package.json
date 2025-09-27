@@ -1,7 +1,11 @@
 {
-  "name": "inputofgrace",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@saurabhkumar/input-of-grace",
+  "version": "1.0.0",
+  "main": "dist/input-of-grace.umd.js",
+  "module": "dist/input-of-grace.js",
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,8 +14,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.13"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
