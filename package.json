@@ -1,6 +1,6 @@
 {
   "name": "input-of-grace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/input-of-grace.umd.js",
   "module": "dist/input-of-grace.js",
   "files": [
