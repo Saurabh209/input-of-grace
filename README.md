@@ -4,6 +4,14 @@ A flexible, reusable React input component for forms.
 Supports multiple states, variants, and sizes for easy integration.
 
 
+## ⚠️ Important Note
+
+This npm package is currently under construction. Some styling features may not work as expected when installed via npm. However, all features work correctly in demo mode. 
+
+For demo mode, clone this repository and hit `npm run dev`.
+
+
+
 ---
 
 ## ✨ Features
