@@ -1,5 +1,5 @@
 {
-  "name": "@saurabhkumar/input-of-grace",
+  "name": "input-of-grace",
   "version": "1.0.0",
   "main": "dist/input-of-grace.umd.js",
   "module": "dist/input-of-grace.js",
@@ -15,8 +15,9 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "clsx": "^2.1.1",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
     "tailwindcss": "^4.1.13"
   },
   "peerDependencies": {

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import clsx from 'clsx';
+
 const InputOfGrace = ({
     InputFieldWidth = '100%',
     borderRadius = '',
@@ -51,14 +53,13 @@ const InputOfGrace = ({
 
 
     // Input styles
-    const inputStyles = `
-      px-3 py-2  placeholder-gray-500 
-    focus:outline-none focus:ring-0 transition-all duration-200
-    ${variantStyles[variant]}
-    ${disabled ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : ''}
-    ${variant === 'outlined' ? 'rounded-md' : ''}
-    ${variant === 'filled' ? 'rounded-t-md' : ''}
-  `;
+    const inputStyles = clsx(
+        'px-3 py-2 placeholder-gray-500 focus:outline-none focus:ring-0 transition-all duration-200',
+        variantStyles[variant],
+        disabled && 'bg-gray-100 text-gray-400 cursor-not-allowed',
+        variant === 'outlined' && 'rounded-md',
+        variant === 'filled' && 'rounded-t-md'
+    );
 
     return (
         <div className={`w-full   `}>

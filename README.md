@@ -24,7 +24,7 @@ Supports multiple states, variants, and sizes for easy integration.
 ## 📦 Installation
 
 ```bash
-npm install @saurabhkumar/input-of-grace
+npm install input-of-grace
 ```
 
 ---
@@ -34,88 +34,26 @@ npm install @saurabhkumar/input-of-grace
 ### 1. Import the component
 
 ```jsx
-import { InputOfGrace } from '@saurabhkumar/input-of-grace';
+import { InputOfGrace } from 'input-of-grace';
 ```
-
-### 2. Basic usage
-
-```jsx
-<InputOfGrace
-  label="Name"
-  placeholder="Enter your name"
-/>
-```
-
-### 3. Custom width and border radius
-
-```jsx
-<InputOfGrace
-  label="Email"
-  placeholder="Enter your email"
-  InputFieldWidth="300px"
-  borderRadius="10px"
-/>
-```
-
-### 4. Pre-filled value
-
-```jsx
-<InputOfGrace
-  label="Username"
-  fixedValue="Tarnished"
-  placeholder="Enter username"
-/>
-```
-
-### 5. Helper text and error message
-
-```jsx
-<InputOfGrace
-  label="Password"
-  placeholder="Enter password"
-  helperText="Use at least 8 characters"
-  errorMessage="Password is too short"
-/>
-```
-
-### 6. Variants and states
-
-```jsx
-{/* Outlined variant */}
-<InputOfGrace
-  label="Outlined input"
-  variant="outlined"
-/>
-
-{/* Filled variant */}
-<InputOfGrace
-  label="Filled input"
-  variant="filled"
-/>
-
-{/* Ghost variant */}
-<InputOfGrace
-  label="Ghost input"
-  variant="ghost"
-/>
-
-{/* Disabled state */}
-<InputOfGrace
-  label="Disabled input"
-  disabled={true}
-/>
-
-{/* Invalid/Error state */}
-<InputOfGrace
-  label="Invalid input"
-  invalid={true}
-  errorMessage="This field is required"
-/>
-```
-
-
-
+ 
 ---
+### 2. Complete form field with all features:
+```jsx
+ <InputOfGrace
+              InputFieldWidth='300px'
+              borderRadius='5px'
+              fixedValue={""}
+              label={""}
+              placeholder={""}
+              helperText={"  "}
+              errorMessage={"Something wrong"}
+              disabled={false}
+              invalid={false}
+              variant={'filled'}
+            />
+```
+
 
 ## 🎮 Demo Mode
 
@@ -157,10 +95,7 @@ Edit `InputOfGrace.jsx` or `src/index.js` to test changes in real-time.
 | `disabled` | `boolean` | `false` | Disables the input field |
 | `invalid` | `boolean` | `false` | Shows error state styling |
 | `variant` | `'outlined' \| 'filled' \| 'ghost'` | `'outlined'` | Input visual variant |
-| `size` | `'small' \| 'medium' \| 'large'` | `'medium'` | Input size |
-| `onChange` | `function` | `() => {}` | Change event handler |
-| `customClass` | `string` | `''` | Custom CSS classes for label |
-| `className` | `string` | `''` | Additional CSS classes |
+
 
 ---
 
@@ -192,30 +127,13 @@ Edit `InputOfGrace.jsx` or `src/index.js` to test changes in real-time.
 
 ---
 
-## 🔧 Advanced Examples
 
-### Complete form field with all features:
-```jsx
-<InputOfGrace
-  InputFieldWidth="100%"
-  borderRadius="8px"
-  label="Full Name"
-  placeholder="Enter your full name"
-  helperText="This will be displayed on your profile"
-  errorMessage="Name must be at least 2 characters"
-  invalid={nameError}
-  variant="outlined"
-  size="medium"
-  value={name}
-  onChange={(e) => setName(e.target.value)}
-  customClass="font-semibold text-gray-700"
-/>
-```
 
 
 ## 📝 Notes
 
 - **Tailwind CSS Required** — Ensure your project has Tailwind CSS installed and configured
+- **clsx Package Required** — Essential for dynamic className composition, used for conditional styling based on props and states
 - **React 16.8+** — Uses React Hooks, requires React 16.8 or higher
 - **Accessibility** — Built with ARIA labels and keyboard navigation support
 
