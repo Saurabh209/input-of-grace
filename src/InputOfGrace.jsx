@@ -23,8 +23,7 @@ const InputOfGrace = ({
 }) => {
 
     const [showTooltip, setShowTooltip] = useState(false);
-
-    // Variant styles
+ 
     const variantStyles = {
         outlined: `
       border-2 bg-white
@@ -49,10 +48,10 @@ const InputOfGrace = ({
     `
     };
 
-    // Label styles based on variant and state
+ 
 
 
-    // Input styles
+    
     const inputStyles = clsx(
         'px-3 py-2 placeholder-gray-500 focus:outline-none focus:ring-0 transition-all duration-200',
         variantStyles[variant],
@@ -63,7 +62,7 @@ const InputOfGrace = ({
 
     return (
         <div className={`w-full   `}>
-            {/* Label */}
+           
 
             {label && (
 
@@ -84,7 +83,7 @@ const InputOfGrace = ({
                                     ?
                                 </button>
 
-                                {/* Tooltip */}
+                               
                                 {showTooltip && (
                                     <div className="absolute bottom-full right-0 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded shadow-lg z-10 opacity-100 transition-opacity duration-200">
                                         {helperText}
@@ -97,7 +96,7 @@ const InputOfGrace = ({
                 </div>
             )}
 
-            {/* Input Field */}
+ 
             <input
                 type="text"
                 value={fixedValue ? fixedValue : null}
